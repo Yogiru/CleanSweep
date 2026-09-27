@@ -67,12 +67,8 @@ build.bat
 
 ## Документация
 
-- `DEVELOPER.md` — руководство разработчика (архитектура, сборка, грабли)
-- `docs\user-guide.md` — справка пользователя
-- `docs\custom-rules.md` — синтаксис Custom\*.ini
-- `docs\decisions.md` — лог решений и изменений (по датам)
-- `docs\port-plan.md` — план порта FluentCleaner
-- `docs\cleaner-comparison.md` — сравнение с FluentCleaner/CCleaner
+- `user-guide.md` — справка пользователя
+- `custom-rules.md` — синтаксис Custom\*.ini
 
 ## Не реализовано (backlog)
 
