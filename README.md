@@ -1,7 +1,7 @@
 # CleanSweep
 
 Portable-деинсталятор и клинер для Windows на Free Pascal / Lazarus —
-один exe (~4.7 МБ), без .NET. Эвристики поиска остатков собраны по мотивам
+один exe (~1.1 МБ после UPX), без .NET. Эвристики поиска остатков собраны по мотивам
 Geek Uninstaller / Uninstall Tool / BCUninstaller / DeepPurge; движок
 очистки портирован с FluentCleaner (winapp2-формат).
 
@@ -23,6 +23,10 @@ Geek Uninstaller / Uninstall Tool / BCUninstaller / DeepPurge; движок
   менеджер «Куки…» — файлы БД не удаляются.
 - **AppX-деблоатер**: пункт «AppX» в главном меню — удаление UWP/MSIX
   пакетов по базе Winappx.ini (только установленные).
+- **Сеть**: пункт «Сеть» — 11 операций сетевого ремонта (flush
+  DNS/NetBIOS/ARP, сброс Winsock и стека TCP/IP, route -f,
+  release/renew, рестарт адаптеров) с цветной колонкой «Последствия»
+  и журналом выполнения.
 - **Прочее**: обновление баз по сети, спец-очистка (корзина, мёртвые
   ярлыки), локализация RU/BE/UK/EN, `CleanSweep.ini`/`CleanSweep.log`
   рядом с exe.
@@ -65,10 +69,20 @@ build.bat
 
 Манифест требует `requireAdministrator`.
 
+## Параметры командной строки
+
+- `-c` — открыть клинер
+- `-e` (`-net`) — форму сброса сетевых настроек
+- `-h` — «О программе»; F1 — справка из любой формы
+
 ## Документация
 
-- `user-guide.md` — справка пользователя
-- `custom-rules.md` — синтаксис Custom\*.ini
+- `DEVELOPER.md` — руководство разработчика (архитектура, сборка, грабли)
+- `docs\user-guide.md` — справка пользователя
+- `docs\custom-rules.md` — синтаксис Custom\*.ini
+- `docs\decisions.md` — лог решений и изменений (по датам)
+- `docs\port-plan.md` — план порта FluentCleaner
+- `docs\cleaner-comparison.md` — сравнение с FluentCleaner/CCleaner
 
 ## Не реализовано (backlog)
 
